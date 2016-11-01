@@ -1,0 +1,47 @@
+[user]
+	name = Farzon Lotfi
+	email = farzonl@icloud.com
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	ls = log --oneline
+[core]
+	editor = vim
+
+[push]
+	default = current
+[diff]
+	tool = bc4
+[difftool "bc4"]
+	cmd = \"bcomp\" \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = bc4
+[mergetool "bc4"]
+	cmd = \"bcomp\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+
+[color]
+	status = always
+	branch = always
+	ui = always
+	interactive = always
+	diff = always
+
+[color "diff"]
+	meta = blue white bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+  
+[color "status"]
+	changed = yellow
+	tracked = green
+	untracked = magenta
+	header = white normal dim
+
+[color "branch"]
+  current = green reverse
+  local = yellow
+  remote = red
